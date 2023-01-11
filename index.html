@@ -1,0 +1,143 @@
+<!DOCTYPE html>
+<html lang="ru">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta
+      name="description"
+      content="Практическая работа на курсе 'Веб-Разроботчик' SkillFactory. Экзотические фрукты"
+    />
+    <meta
+      name="keywords"
+      content="Обучение, SkillFactory, JavaScript, практическая работа, базовый frontend, Экзотические фрукты"
+    />
+    <meta name="author" content="Анатолий Кострыкин" />
+    <meta name="copyright" content="Анатолий Кострыкин" />
+    <meta property="og:locale" content="ru_RU" />
+    <meta property="og:type" content="article" />
+    <meta property="og:title" content="Экзотические фрукты" />
+    <meta
+      property="og:description"
+      content="Практическая работа на курсе 'Веб-Разроботчик' SkillFactory. Экзотические фрукты"
+    />
+    <meta property="og:image" content="./img/for-readme.png" />
+    <meta property="og:url" content="#" />
+    <meta property="og:site_name" content="Экзотические фрукты" />
+    <meta name="twitter:card" content="summary" />
+    <meta name="twitter:site" content="Анатолий" />
+    <meta name="twitter:title" content="Экзотические фрукты" />
+    <meta
+      name="twitter:description"
+      content="Практическая работа на курсе 'Веб-Разроботчик' SkillFactory. Экзотические фрукты"
+    />
+    <meta name="twitter:image" content="./img/for-readme.png" />
+    <link
+      rel="shortcut icon"
+      href="./img/granate-icon.ico"
+      type="image/x-icon"
+    />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,400;0,700;1,400;1,700&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      href="https://fonts.googleapis.com/css2?family=El+Messiri:wght@400;700&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      href="https://fonts.googleapis.com/css2?family=PT+Sans:ital,wght@0,400;0,700;1,400;1,700&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="./css/style.css" />
+    <title>Экзотические фрукты</title>
+  </head>
+
+  <body>
+    <div class="wrapper">
+      <main class="content" id="content">
+        <aside class="sidebar">
+          <h3 class="control-panel__title title">Панель управления ⚙️</h3>
+          <article class="control-panel">
+            <section class="control-panel-section">
+              <h3 class="control-panel__subtitle">
+                Перемешать элементы списка
+              </h3>
+              <button class="control-panel__btn" id="mixBtn">Перемешать</button>
+            </section>
+            <section class="control-panel-section">
+              <h3 class="control-panel__subtitle">
+                Отфильтровать элементы списка
+              </h3>
+              <label for="minWeightInput">Минимальный вес:</label>
+              <input
+                class="control-panel__input"
+                type="text"
+                id="minWeightInput"
+                placeholder="0"
+              />
+              <label for="maxWeightInput">Максимальный вес:</label>
+              <input
+                class="control-panel__input"
+                type="text"
+                id="maxWeightInput"
+                placeholder="1000"
+              />
+              <button class="control-panel__btn" id="filterBtn">
+                Фильтровать
+              </button>
+            </section>
+            <section class="control-panel-section">
+              <h3 class="control-panel__subtitle">
+                Отсортировать элементы списка
+              </h3>
+              <p>
+                <span>Алгоритм сортировки:</span> <span id="sortKind"></span>
+              </p>
+              <p><span>Время сортировки:</span> <span id="sortTime"></span></p>
+              <button class="control-panel__btn" id="sortChangeBtn">
+                Сменить алгоритм сортировки
+              </button>
+              <button class="control-panel__btn" id="sortActionBtn">
+                Сортировать
+              </button>
+            </section>
+            <section class="control-panel-section">
+              <h3 class="control-panel__subtitle">Добавить элемент в список</h3>
+              <label for="kindInput">Вид фрукта:</label>
+              <input
+                class="control-panel__input"
+                type="text"
+                id="kindInput"
+                placeholder="напр. манго"
+              />
+              <label for="colorInput">Цвет:</label>
+              <input
+                class="control-panel__input"
+                type="text"
+                id="colorInput"
+                placeholder="мин. 3 символа"
+                title="доступны крас., зел., син., жел., оранж., кор., гол., фиол., роз. в любых сочетаниях"
+              />
+              <label for="weightInput">Вес (кг):</label>
+              <input
+                class="control-panel__input"
+                type="text"
+                id="weightInput"
+                placeholder="от 0 до 1000"
+                title="соберете больше 1000, сообщите нам"
+              />
+              <button class="control-panel__btn" id="addFruitBtn">
+                Добавить фрукт
+              </button>
+            </section>
+          </article>
+        </aside>
+        <section class="fruits">
+          <h3 class="fruits__title title">Список экзотических фруктов</h3>
+          <ul class="fruits-list"></ul>
+        </section>
+      </main>
+    </div>
+    <script src="./js/script.js"></script>
+  </body>
+</html>
